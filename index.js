@@ -97,11 +97,19 @@ console.log(finances.length); //one entry per month makes 86 months
 
 let numberOfMonths = finances.length;
 
-let netTotal = 0;
+let netTotal = 0;  // variable to store net total
+let totalDiff = 0; // variable to store the total of the differences between months
 
 for (let i = 0; i < finances.length; i++ ) {
-  netTotal += finances[i][1];
+  netTotal = netTotal + finances[i][1];
+  if (i > 0) {
+   var diff = finances[i][1] - finances[i - 1][1];
+   totalDiff = totalDiff + diff;
+  }
+
 }
 
 console.log(netTotal);
+console.log(totalDiff);
+console.log(totalDiff / (numberOfMonths-1));
 
