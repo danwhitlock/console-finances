@@ -95,7 +95,13 @@ console.log(finances[1][1]); // returns second amount
 
 console.log(finances.length); //one entry per month makes 86 months
 
+let numberOfMonths = finances.length;
+
+let netTotal = 0;
+
 for (let i = 0; i < finances.length; i++ ) {
-  
+  netTotal += finances[i][1];
 }
+
+console.log(netTotal);
 
