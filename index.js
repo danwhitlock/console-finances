@@ -88,11 +88,14 @@ var finances = [
 ];
 
 
-
 console.log(finances[0][0]); // returns first month
 console.log(finances[0][1]); // returns first amount
 console.log(finances[1][0]); // returns second month
 console.log(finances[1][1]); // returns second amount
 
-console.log(finances.length); //86
+console.log(finances.length); //one entry per month makes 86 months
+
+for (let i = 0; i < finances.length; i++ ) {
+  
+}
 
