@@ -111,8 +111,12 @@ for (let i = 0; i < finances.length; i++ ) {
 
 }
 
+// variable to store average of all differences, to 2 decimal places
+let averageDiff = (totalDiff / (numberOfMonths-1)).toFixed(2);
+
 // check loop results
 console.log("The net total is " + netTotal);
 console.log("The total of all differences is " + totalDiff);
 console.log("The average difference between months is " + (totalDiff / (numberOfMonths-1)));
+console.log("The rounded average difference is " + averageDiff);
 
