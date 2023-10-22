@@ -98,8 +98,10 @@ let numberOfMonths = finances.length; // variable to hold the number of months d
 
 let netTotal = 0;  // variable to store net total
 let totalDiff = 0; // variable to store the total of the differences between months
-let biggestIncrease = 0; // variable to store the biggest increase
-let biggestDecrease = 0; // variable to store the biggest decrease
+let biggestIncreaseMonth = ""; // variable to store the month of the biggest increase
+let biggestIncreaseValue = 0;  // variable to store the amount
+let biggestDecreaseMonth = ""; // variable to store month of the biggest decrease
+let biggestDecreaseValue = 0;  // variable to store the amount
 
 // loop
 for (let i = 0; i < finances.length; i++ ) {        // iterate through finances array
@@ -110,12 +112,14 @@ for (let i = 0; i < finances.length; i++ ) {        // iterate through finances 
    totalDiff = totalDiff + diff;                    // add current difference to total differences
   }
 
-  if (diff > biggestIncrease) {                     // determine if current difference is biggest increase so far 
-    biggestIncrease = diff;                         // if so, update biggest increase
+  if (diff > biggestIncreaseValue) {                     // determine if current difference is biggest increase so far 
+    biggestIncreaseMonth = finances[i][0];               // capture the month that happened
+    biggestIncreaseValue = diff;                         // capture the value
   }
 
-  if (diff < biggestDecrease) {                     // determine if current difference is biggest decrease so far
-    biggestDecrease = diff;                         // if so, update biggest decrease
+  if (diff < biggestDecreaseValue) {                     // determine if current difference is biggest decrease so far
+    biggestDecreaseMonth = finances[i][0];               // capture the month that happened
+    biggestDecreaseValue = diff;                         // capture the value
   }
 }
 
@@ -127,7 +131,10 @@ console.log("The net total is " + netTotal);
 console.log("The total of all differences is " + totalDiff);
 console.log("The average difference between months is " + (totalDiff / (numberOfMonths-1)));
 console.log("The rounded average difference is " + averageDiff);
-console.log("The largest increase is " + biggestIncrease);
-console.log("The largest decrease is " + biggestDecrease);
-
+// console.log("The largest increase is " + biggestIncrease);
+// console.log("The largest decrease is " + biggestDecrease);
+console.log(biggestIncreaseMonth);
+console.log(biggestIncreaseValue);
+console.log(biggestDecreaseMonth);
+console.log(biggestDecreaseValue);
 
