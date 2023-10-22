@@ -87,12 +87,12 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// check how to access array indexes
-console.log(finances[0][0]); // returns first month
-console.log(finances[0][1]); // returns first amount
-console.log(finances[1][0]); // returns second month
-console.log(finances[1][1]); // returns second amount
-console.log(finances.length); // returns number of entries
+// // check how to access array indexes
+// console.log(finances[0][0]); // returns first month
+// console.log(finances[0][1]); // returns first amount
+// console.log(finances[1][0]); // returns second month
+// console.log(finances[1][1]); // returns second amount
+// console.log(finances.length); // returns number of entries
 
 // Create variables
 
@@ -124,26 +124,34 @@ for (let i = 0; i < finances.length; i++ ) { // iterate through finances array
   }
 }
 
-// variable to store average of all differences, to 2 decimal places
+// variable to store average of all differences to 2 decimal places
 let averageDiff = (totalDiff / (numberOfMonths-1)).toFixed(2);
 
-// check loop results
-console.log("net total " + netTotal);
-console.log("total of all differences " + totalDiff);
-console.log("average difference " + (totalDiff / (numberOfMonths-1)));
-console.log("rounded average difference " + averageDiff);
-console.log(biggestIncreaseMonth);
-console.log(biggestIncreaseValue);
-console.log(biggestDecreaseMonth);
-console.log(biggestDecreaseValue);
+// // check all loop results
+// console.log("net total " + netTotal);
+// console.log("total of all differences " + totalDiff);
+// console.log("average difference " + (totalDiff / (numberOfMonths-1)));
+// console.log("rounded average difference " + averageDiff);
+// console.log(biggestIncreaseMonth);
+// console.log(biggestIncreaseValue);
+// console.log(biggestDecreaseMonth);
+// console.log(biggestDecreaseValue);
 
 
-// Display final results in console
-console.log("Financial Analysis");
-console.log("----------------");
-console.log("Total Months: " + numberOfMonths);
-console.log("Total: $" + netTotal);
-console.log("AverageChange: " + averageDiff);
-console.log("Greatest Increase in Profits/Losses: " + biggestIncreaseMonth + " ($" + biggestIncreaseValue + ")");
-console.log("Greatest Decrease in Profits/Losses: " + biggestDecreaseMonth + " ($" + biggestDecreaseValue + ")");
+// // Display final results in console
+// console.log("Financial Analysis");
+// console.log("----------------");
+// console.log("Total Months: " + numberOfMonths);
+// console.log("Total: $" + netTotal);
+// console.log("AverageChange: " + averageDiff);
+// console.log("Greatest Increase in Profits/Losses: " + biggestIncreaseMonth + " ($" + biggestIncreaseValue + ")");
+// console.log("Greatest Decrease in Profits/Losses: " + biggestDecreaseMonth + " ($" + biggestDecreaseValue + ")");
 
+// Combine final results into a single console log
+console.log("Financial Analysis" +
+            "\n----------------" +
+            "\nTotal Months: " + numberOfMonths +
+            "\nTotal: $" + netTotal +
+            "\nAverageChange: " + averageDiff +
+            "\nGreatest Increase in Profits/Losses: " + biggestIncreaseMonth + " ($" + biggestIncreaseValue + ")" +
+            "\nGreatest Decrease in Profits/Losses: " + biggestDecreaseMonth + " ($" + biggestDecreaseValue + ")");
