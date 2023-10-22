@@ -33,9 +33,13 @@ The expected results were -
 
 I used a combination of variables, 'for loops' and 'if statements' in order to complete this challenge.  
 
-My results can be viewed by opening index.html in Google Chrome and using Developer Tools to inspect the console - 
+My results can be viewed by inspecting the console at the following link -
+
+https://danwhitlock.github.io/console-finances/
 
 ![A screenshot showing the results of the challenge](./console-finances-results.png);
+
+
 
 
 
