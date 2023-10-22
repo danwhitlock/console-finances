@@ -1,6 +1,6 @@
 **Description**
 
-This is a challenge to output financial information from a selection of data.
+This is a challenge to output financial information from a selection of data using JavaScript.
 
 Data was provided in the format 
 
