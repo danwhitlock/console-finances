@@ -87,19 +87,21 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
+// testing array indexes
 console.log(finances[0][0]); // returns first month
 console.log(finances[0][1]); // returns first amount
 console.log(finances[1][0]); // returns second month
 console.log(finances[1][1]); // returns second amount
-
 console.log(finances.length); //one entry per month makes 86 months
 
-let numberOfMonths = finances.length;
+let numberOfMonths = finances.length; //variable to hold the number of months data
 
 let netTotal = 0;  // variable to store net total
 let totalDiff = 0; // variable to store the total of the differences between months
+let biggestIncrease = 0; // variable to store the biggest increase
+let biggestDecrease = 0; // variable to store the biggest decrease
 
+// loop
 for (let i = 0; i < finances.length; i++ ) {
   netTotal = netTotal + finances[i][1];
   if (i > 0) {
@@ -109,7 +111,8 @@ for (let i = 0; i < finances.length; i++ ) {
 
 }
 
-console.log(netTotal);
-console.log(totalDiff);
-console.log(totalDiff / (numberOfMonths-1));
+// check loop results
+console.log("The net total is " + netTotal);
+console.log("The total of all differences is " + totalDiff);
+console.log("The average difference between months is " + (totalDiff / (numberOfMonths-1)));
 
