@@ -87,15 +87,16 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// testing array indexes
+// check how to access array indexes
 console.log(finances[0][0]); // returns first month
 console.log(finances[0][1]); // returns first amount
 console.log(finances[1][0]); // returns second month
 console.log(finances[1][1]); // returns second amount
-console.log(finances.length); //one entry per month makes 86 months
+console.log(finances.length); // returns number of entries
+
+// Create variables
 
 let numberOfMonths = finances.length; // variable to hold the number of months data
-
 let netTotal = 0;  // variable to store net total
 let totalDiff = 0; // variable to store the total of the differences between months
 let biggestIncreaseMonth = ""; // variable to store the month of the biggest increase
@@ -104,22 +105,22 @@ let biggestDecreaseMonth = ""; // variable to store month of the biggest decreas
 let biggestDecreaseValue = 0;  // variable to store the amount
 
 // loop
-for (let i = 0; i < finances.length; i++ ) {        // iterate through finances array
-  netTotal = netTotal + finances[i][1];             // add each value to net total
+for (let i = 0; i < finances.length; i++ ) { // iterate through finances array
+  netTotal = netTotal + finances[i][1]; // add each value to net total
 
-  if (i > 0) {                                      // start from second record as first month has no previous to compare to
-   var diff = finances[i][1] - finances[i - 1][1];  // capture difference between current and previous month  
-   totalDiff = totalDiff + diff;                    // add current difference to total differences
+  if (i > 0) { // start from second record as first month has no previous to compare to
+   var diff = finances[i][1] - finances[i - 1][1]; // capture difference between current and previous month  
+   totalDiff = totalDiff + diff; // add current difference to total differences
   }
 
-  if (diff > biggestIncreaseValue) {                     // determine if current difference is biggest increase so far 
-    biggestIncreaseMonth = finances[i][0];               // capture the month that happened
-    biggestIncreaseValue = diff;                         // capture the value
+  if (diff > biggestIncreaseValue) { // determine if current difference is biggest increase so far 
+    biggestIncreaseMonth = finances[i][0]; // capture the month that happened
+    biggestIncreaseValue = diff; // capture the value of the difference
   }
 
-  if (diff < biggestDecreaseValue) {                     // determine if current difference is biggest decrease so far
-    biggestDecreaseMonth = finances[i][0];               // capture the month that happened
-    biggestDecreaseValue = diff;                         // capture the value
+  if (diff < biggestDecreaseValue) { // determine if current difference is biggest decrease so far
+    biggestDecreaseMonth = finances[i][0]; // capture the month that happened
+    biggestDecreaseValue = diff; // capture the value of the difference
   }
 }
 
@@ -127,14 +128,22 @@ for (let i = 0; i < finances.length; i++ ) {        // iterate through finances 
 let averageDiff = (totalDiff / (numberOfMonths-1)).toFixed(2);
 
 // check loop results
-console.log("The net total is " + netTotal);
-console.log("The total of all differences is " + totalDiff);
-console.log("The average difference between months is " + (totalDiff / (numberOfMonths-1)));
-console.log("The rounded average difference is " + averageDiff);
-// console.log("The largest increase is " + biggestIncrease);
-// console.log("The largest decrease is " + biggestDecrease);
+console.log("net total " + netTotal);
+console.log("total of all differences " + totalDiff);
+console.log("average difference " + (totalDiff / (numberOfMonths-1)));
+console.log("rounded average difference " + averageDiff);
 console.log(biggestIncreaseMonth);
 console.log(biggestIncreaseValue);
 console.log(biggestDecreaseMonth);
 console.log(biggestDecreaseValue);
+
+
+// Display final results in console
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + numberOfMonths);
+console.log("Total: $" + netTotal);
+console.log("AverageChange: " + averageDiff);
+console.log("Greatest Increase in Profits/Losses: " + biggestIncreaseMonth + " ($" + biggestIncreaseValue + ")");
+console.log("Greatest Decrease in Profits/Losses: " + biggestDecreaseMonth + " ($" + biggestDecreaseValue + ")");
 
