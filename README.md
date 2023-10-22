@@ -37,7 +37,7 @@ My results can be viewed by inspecting the console at the following link -
 
 https://danwhitlock.github.io/console-finances/
 
-![A screenshot showing the results of the challenge](./console-finances-results.png);
+![A screenshot showing the results of the challenge](./console-finances-results.png)
 
 
 
